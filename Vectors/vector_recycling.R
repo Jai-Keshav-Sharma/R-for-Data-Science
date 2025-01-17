@@ -12,18 +12,24 @@ v1 + v2
 ##  Here the longer object length is multiple of the shortest object length.
 ## So, we didn’t get a warning message.
 
-
+## rep() function is working internally
 
 
 
 
 # creating vector with 10 to 14 values
-vec1 = 10:14
+vec1 <- 10:14
 
 # creating vector with 3 to 5 values
-vec2 = 3:5
+vec2 <- 3:5
 
 # adding vector1 and vector2
 print(vec1 + vec2)
 
 ## Here the longer object length is not multiple of the shortest object length. So, we got a warning message.
+
+v3 <- c(1, 2, 3, 4, 5)
+v4 <- c(1, 2, 3)
+
+v3 + v4
+v4 + v3
