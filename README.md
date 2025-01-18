@@ -18,8 +18,7 @@ Make sure you have R and RStudio installed on your system. You can download them
 ```bash
 git clone https://github.com/Jai-Keshav-Sharma/R-for-Data-Science.git
 cd R-for-Data-Science
-```bash
-Install the necessary R packages:
-```bash
+
+### Install the necessary R packages:
 install.packages(c("dplyr", "ggplot2", "tidyr", "readr", "caret"))
-```bash
+
