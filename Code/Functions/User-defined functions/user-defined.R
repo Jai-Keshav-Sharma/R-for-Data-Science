@@ -138,3 +138,5 @@ print(Rectangle(width = 8, length = 4)) # If you do not want to follow any order
 
 # Case 3:
 print(Rectangle())
+
+
