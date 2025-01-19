@@ -1,4 +1,4 @@
-#########----------------------BUILT IN FUNCTIONS IN R------------------#########
+#########----------------------BUILT-IN FUNCTIONS IN R------------------#########
 
 ###_____________________ 1. Mathematical Functions__________________#######
 
@@ -61,12 +61,11 @@ sum(1, 2, 3, 4, 5)
 mean(1, 2, 3, 4, 5)
 
 # median(): It returns the median of all elements in a vector.
-median(1 : 5)
-median(1, 2, 3, 4, 5) #outout: 1
-                      ## Reason: When you use median(1, 2, 3, 4, 5), R interprets this as calling the median() function with multiple arguments instead of a single vector.
-                      ## In R, when you pass multiple arguments to a function, it treats them as separate values. The median() function, when called with multiple arguments, will only consider the first argument (in this case, 1) and return it as the result.
-median(c(1, 2, 3, 4, 5)) ##correct way
-
+median(1:5)
+# median(1, 2, 3, 4, 5) # output: 1
+# Reason: When you use median(1, 2, 3, 4, 5), R interprets this as calling the median() function with multiple arguments instead of a single vector.
+# In R, when you pass multiple arguments to a function, it treats them as separate values. The median() function, when called with multiple arguments, will only consider the first argument (in this case, 1) and return it as the result.
+median(c(1, 2, 3, 4, 5)) # correct way
 
 ###______________________ String Functions ______________________#############
 
@@ -82,30 +81,30 @@ nchar("Hello World")
 # substr(): It extracts a substring from a string.
 substr("Hello World", start = 1, stop = 5)
 substr("Hello World", 1, 5)
-substr("Hello World", stop= 5, start = 1)
+substr("Hello World", stop = 5, start = 1)
 
 # tolower(): It converts a string to lowercase.
 tolower("Hello World")
-tolower("1234") #output: "1234"
+tolower("1234") # output: "1234"
 
 # toupper(): It converts a string to uppercase.
 toupper("Hello World")
-toupper("1234") #output: "1234"
+toupper("1234") # output: "1234"
 
 # trimws(): It removes leading and trailing whitespaces from a string.
 trimws("  Hello World  ")
 
 # strsplit(): It splits a string into substrings based on a specified delimiter.
 strsplit("Hello,World", ",")
-strsplit("Hello,World", ",")[[1]][1] #explanation: The [[1]] operator is used to extract the first element of the list returned by strsplit(). In this case, it extracts the character vector c("Hello", "World").
-                                      ## Finally, the [1] operator is used to extract the first element of the character vector obtained from the previous step. In this case, it extracts the string "Hello".
+# strsplit("Hello,World", ",")[[1]][1] 
+# explanation: The [[1]] operator is used to extract the first element of the list returned by strsplit(). In this case, it extracts the character vector c("Hello", "World").
+# Finally, the [1] operator is used to extract the first element of the character vector obtained from the previous step. In this case, it extracts the string "Hello".
 strsplit("Hello,World", ",")[[1]][2]
 
 # grep(): It searches for a pattern in a string and returns the index of the matching substring.
 vec <- c("pqrs", "pqr", "pq", "put")
 patt <- grep("pqr", vec)
 print(patt)
-
 
 ### _______________________3. Statistical Functions ___________________#####
 
@@ -138,9 +137,8 @@ scale(1:5)
 # summary(): It provides a summary of a vector, including the minimum, 1st quartile, median, mean, 3rd quartile, and maximum.
 summary(1:5)
 
-#range(): It returns the range of a vector.
+# range(): It returns the range of a vector.
 range(1:5)
-
 
 ###________________________ 4. Date and Time Functions___________________#########
 
@@ -167,7 +165,6 @@ as.Date("2022-01-01")
 as.Date("2022-01-01", format = "%Y-%m-%d")
 class(as.Date("2022-01-01", format = "%Y-%m-%d"))
 
-
 ###______________________ 4. Other Functions__________________________######
 
 # unique(): It returns the unique elements of a vector.
@@ -181,7 +178,6 @@ rev(c(1, 2, 3))
 
 # is.na(): It checks if a value is missing (NA).
 is.na(NA)
-
 
 ## NOTE: 
 # 1. The above functions are just a few examples of the built-in functions in R. There are many more functions available in R for various purposes.
