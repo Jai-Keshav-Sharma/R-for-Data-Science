@@ -59,7 +59,7 @@ nrow(mdat)
 # Getting the number of columns in the matrix
 ncol(mdat)
 
-## METHOD 2 (using dim() function applied on a vector)
+## ------------------METHOD 2 (using dim() function applied on a vector)-------------_##
 
 # Creating a vector
 v2 <- 1:12
@@ -73,7 +73,7 @@ dim(v2) <- c(3, 4, 1)  # Example
 v2
 dim(v2)
 
-############------------ USE OF rbind() and cbind() ------------###################
+############------------ METHOD 3: USE OF rbind() and cbind() ------------###################
 
 # Creating vectors
 v3 <- 1:3
@@ -127,7 +127,7 @@ mat[1, -1]  # Elements of the first row after excluding the first column
 # Excluding specific rows and columns
 mat[-c(1, 3), -c(1, 4)]  # Elements after excluding the 1st and 3rd rows and 1st and 4th columns
 
-## (3) : Altering the accessing method from mat[a, b] to mat[a][b]
+## (3) : WHAT WILL mat[a][b] DO ?
 
 # Creating a matrix with row and column names
 mdat2 <- matrix(
