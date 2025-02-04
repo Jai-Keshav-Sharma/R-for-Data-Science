@@ -1,4 +1,4 @@
-### ------------------------MultiDimensional Arrays------------------------ ###
+### ------------------------MultiDimensional Matrices------------------------ ###
 
 # Creating a 3x4x2 array with values from 1 to 24
 AR <- array(data = c(1:24), dim = c(3, 4, 2))  # [row, col, layer]
