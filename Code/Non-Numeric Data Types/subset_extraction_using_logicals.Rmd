@@ -1,0 +1,63 @@
+## SUBSET EXTRACTION USING LOGICAL VECTORS
+
+```{r}
+vec <- c(1, 2, 3, 4, 5)
+log_vec <- c(TRUE, FALSE, TRUE, FALSE, TRUE)
+vec[log_vec]
+```
+
+```{r}
+vec2 <- 11 : 20
+## extract odd numbers
+vec2[vec2 %% 2 == 1]
+```
+
+```{r}
+## vector to select indices
+selInd <- c(T, F, F, T, T, F, F, T, F, F)
+vec2[selInd]
+
+
+## getting indices using logical vecgtor
+ind <- c(1 : length(selInd)) ## indices of selInd
+ind[selInd]
+
+```
+
+### USING which() FUNCTION
+
+```{r}
+## getting indices using which() function
+which(x = selInd)  #Give the TRUE indices of a logical object, allowing for array                         indices.
+
+which(!selInd)  #Give the FALSE indices of a logical object, allowing for array                       indices.
+```
+
+### QUESTION
+
+```{r}
+foo <- c(7, 5, 6, 1, 2, 10, 8, 3, 8, 2)
+bar <- foo[foo >= 5]
+bar
+```
+
+```{r}
+foo[!(foo >= 5)]
+```
+
+```{r}
+baz <- matrix(data = bar, nrow = 2, ncol = 3, byrow = TRUE)
+baz
+```
+
+```{r}
+ind <- which(baz == 8)
+baz[ind] <- baz[1, 2] ^ 2
+baz
+```
+
+```{r}
+
+all((baz <= 25) & (baz > 4))
+
+```

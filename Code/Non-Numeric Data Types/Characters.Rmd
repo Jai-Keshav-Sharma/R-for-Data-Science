@@ -1,0 +1,104 @@
+---
+output: html_notebook
+---
+
+# Characters
+
+```{r}
+foo <- "this is a character string"
+foo2 <- c("this is a character string", "hi")
+length(foo)  ## not suitable for finding number of characters in a string
+length(foo2)
+```
+
+### Using nchar() to find length of string
+
+```{r}
+nchar(foo)
+nchar(foo2)
+
+```
+
+```{r}
+temp <- "22.2"
+temp
+temp * 2  # Error in temp * 2 : non-numeric argument to binary operator
+```
+
+### String Comparison
+
+```{r}
+"hello" == "hello"
+"Hello" == "hello"
+"hello" == "apple"
+```
+
+#### Note: There is no concept of ASCII values in comparison of strings in R. Its follows a different criteria of comparing strings.
+
+#### It order is : aA \< bB \< cC \< dD \< ... \< zZ
+
+#### Also,  there is no such order for special characters is defined in R.
+
+```{r}
+"hello" > "apple"
+"Hello" > "Apple"
+"apple" > "Apple" 
+"Apple" > "abble"
+
+```
+
+```{r}
+"hello" < "hello " ## not checking length, doing character by character comparison
+"!" < "@"
+"@" < "#"  ## no order known for special charcters
+"@" == "@"
+```
+
+### Concatenation
+
+```{r echo=FALSE}
+str1 <- cat("hola", "amigos")
+str1
+```
+
+```{r}
+str2 <- paste("hola", "amigos")
+str2
+```
+
+```{r}
+cat("hi\nall") ## new line is added
+
+```
+
+```{r}
+paste("hi\nall") ## no escape sequence expanded because paste has to return its                           content to a variable
+```
+
+```{r}
+"hi\nall" ## no escape sequence expanded as this notation can also be used to store in              variable
+```
+
+```{r}
+class(cat("hi\nall")) ## NULL bcz cat returns nothing
+```
+
+```{r}
+class(paste("hi\nall"))  ## "character"
+```
+
+```{r}
+paste("hi", "how", "are", "you", "!", sep = "--")  
+paste("hi", "how", "are", "you", "!", sep = "") 
+paste("hi", "how", "are", "you", "!") ## default separator is " " (space)
+```
+
+### Escape Sequences in R
+
+```{r}
+/n
+/t
+/b
+//
+/"
+```
